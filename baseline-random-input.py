@@ -7,6 +7,6 @@ for dataset in 'dev-0', 'test-A':
         for line in f_in:
             line = line.rstrip('\n').split('\t')
             line = line[1:]
-            #line = random.shuffle(line)
+            random.shuffle(line)
             line = '\t'.join(line) + '\n'
             f_out.write(line)
