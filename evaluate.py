@@ -1,4 +1,4 @@
-def mrr(y_pred, y_gt):
+def mean_reciprocal_rank(y_pred, y_gt) -> float:
     ret = 0
     for pred, gt in zip(y_pred, y_gt):
         for i, s in enumerate(pred, 1):
