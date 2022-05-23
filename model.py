@@ -39,7 +39,7 @@ def main(dataset:Dataset=Dataset.train):
     elif dataset == Dataset.dev:
         X, X_cadidates, y = load_datasets.load_dev()
     elif dataset == Dataset.test:
-        X, X_cadidates, _ = load_datasets.load_test()
+        X, X_cadidates = load_datasets.load_test()
     else:
         raise ValueError("Unknown dataset")
     result = get_prediction(X, X_cadidates, device='cuda')
