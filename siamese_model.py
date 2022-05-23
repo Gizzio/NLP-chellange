@@ -1,5 +1,3 @@
-from turtle import pos
-from numpy import negative
 from sentence_transformers import SentenceTransformer, InputExample, losses
 from torch.utils.data import DataLoader
 import load_datasets
