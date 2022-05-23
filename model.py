@@ -28,4 +28,5 @@ def get_prediction(X: List[str], X_cadidates: List[List[str]],device="cpu") -> L
 if __name__=='__main__':
     X, X_cand, y = load_datasets.load_train()
     result = get_prediction(X, X_cand, device='cuda')
-    pd.DataFrame(result)
+    df = pd.DataFrame(result)
+    df.to_csv("sbert_result.tsv",sep='\t', index=False, header=False)
