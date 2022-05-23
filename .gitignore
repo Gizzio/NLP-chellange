@@ -6,3 +6,7 @@
 *.o
 .DS_Store
 .token
+*.ipynb
+*.tsv
+*.gz
+.gitignore
